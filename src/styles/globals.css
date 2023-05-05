@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+.base__button {
+    @apply px-4 md:px-6 py-[6px] bg-orange-500 active:scale-[0.95] duration-150 transition-all shadow text-white font-roboto flex items-center rounded-md hover:bg-orange-600 active:bg-orange-500 disabled:bg-orange-400 disabled:cursor-not-allowed;
+}
+.base__select {
+    @apply px-4 md:px-6 py-[6px] rounded-md bg-gray-50 duration-150 transition-all text-black shadow hover:bg-gray-100 active:bg-gray-200 outline-none cursor-pointer border border-gray-100;
+}
+.base__input{
+    @apply bg-gray-50 px-3 py-2 outline-none border active:scale-[0.95] duration-150 transition-all border-gray-200 mt-1 focus:bg-white focus:border-orange-500 rounded-md shadow;
+}
+.form__error{
+    @apply text-red-500 text-sm;
+}
+.base__search{
+    @apply bg-gray-50 border border-gray-200 px-3 py-2 outline-none focus-within:bg-white focus-within:border-orange-500 shadow rounded-md;
+}
+.scale-up{
+    animation: scale-up-an .3s;
+}
+@keyframes scale-up-an {
+    from{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.animate-bg-opacity{
+    animation: animate-bg-opacity-an .4s;
+}
+@keyframes animate-bg-opacity-an {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.animate-slow{
+    animation: animate-slowly-an 1s;
+}
+@keyframes animate-slowly-an {
+    from{
+        opacity: 0;
+        transform: scale(.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-opacity{
+    animation: animate-opacity-an .5s;
+}
+@keyframes animate-opacity-an {
+    from{
+        opacity: 0;
+        /* transform: translateX(-100%); */
+    }
+    to{
+        opacity: 1;
+        /* transform: translateX(0%); */
+    }
+}
+
+@tailwind utilities;
+
+.c-shadow{
+    box-shadow: 0 0 2px rgb(0,0,0,0.1);
+}
+*{
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
